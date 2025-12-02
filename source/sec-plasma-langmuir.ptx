@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-plasma-langmuir" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Langmuir Probe</title>
+
+    <subsection xml:id="subsec-plasma-langmuir-background">
+        <title>Background</title>
+
+        <p>
+            When one typically considers a gas, one things of a collection of neutral particles whose dynamical behavior is governed by local interactions (i.e. collisions). This picture, however, is not entirely accurate because there is always some degree of dissociation - which is to say there are some electrons that have been separated from neutral atoms, resulting in some number of free electrons and positive ions. At room temperature, the degree of dissociation (ionization) is so low that molecular and atomic properties dominate. As the temperature increases, the ionization increases and at some point, the behavior of the system is governed not only by local interactions but also by long-range electromagnetic forces. Typicaly, this happens when the thermal energy, <m>k_B T</m>, approaches the ionization energy <m>E_i</m> (the energy neededto free the outermost electron). When this occurs, one moves into the plasma state. In general, the degree of ionization necessary to enter the plasma state can be quite low (~0.1%). As a result, there is not a sharp boundary that denotes the transition into the plasma state.
+        </p>
+        <p>
+            As with any state of matter, it is important to be able to quantify that state. In the case of the plasma state, the typical parameters that are used include the ion and electron densities, the electron temperature, and the electron distribution function (that is, the distribution of electron velocities). The simplest method to accomplish this involves inserting a small metal electrode (Langmuir probe) into the plasma and then measuring the electrons and ions (currents) that are collected by the probe as the voltage applied to the probe is varied with respect to the plasma space potential, <m>V_p</m>.
+            <fn> Because there is an imbalance in electron and ion loss rates, there will be a difference in electric potential between the plasma and the wall of the plasma vessel.</fn> 
+            A typical I-V curve (current vs voltage) can be seen in <xref ref="fig-plasma-IV-curve"/> and is explained in <xref ref="subsec-plasma-langmuir-theory"/>.
+        </p>
+
+        <figure xml:id="fig-plasma-IV-curve">
+            <caption>Typical Langmuir probe I-V trace.</caption>
+            <image source="plasma/Langmuir_curve1.png"/>
+        </figure>
+    </subsection>
+
+    <subsection xml:id="subsec-plasma-langmuir-procedure">
+        <title>Experimental Overview and Procedure</title>
+
+        <p>
+            To examine the plasma state, you will be using the 0A4-G vacuum tube, a cold-cathode, gas filled triode. This tube is filled with argon gas at a pressure of 1~Torr and contains three electrodes: a metal disc cathode (pin 2), a wire tip electrode (pin 5), and a trigger anode (pin 7) as pictured in <xref ref="fig-plasma-0A4G-diag"/>.
+        </p>
+        <figure xml:id="fig-plasma-0A4G-diag">
+            <caption>Cartoon depiction of the 0A4-G vacuum tube and pin diagram (as viewed from the bottom). Note regarding the tube specifications: In its usual applications, what is here called the anode is called the starter anode and what is here called the Langmuir probe is called the anode.</caption>
+            <image source="plasma/0A4G_diag.png">
+                <shortdescription></shortdescription>
+            </image>
+        </figure>
+        <p>
+            You will generate a plasma by applying a voltage between the cathode and anode (<m>V_\text{cathode}\approx -60\text{V}</m> with respect to the grounded anode) and then measure the parameters of the resulting plasma using the wire tip electrode, which will function as a Langmuir probe. This is seen in the circuit schematic in <xref ref="fig-plasma-schematic"/>. To protect the gas tube, a resistor is used to limit the current in the discharge.
+        </p>
+        <figure xml:id="fig-plasma-schematic">
+            <caption>Schematic of the experiment. When the cathode is held at a voltage of <m>V_\text{cathode}\approx -60\text{V}</m> relative to the anode, the argon gas in the tube partially ionizes and a discharge is set up between the anode and cathode. Note that <m>R=500\Omega</m> in the Washington College apparatus.</caption>
+            <image source="plasma/schematic.png">
+                <shortdescription></shortdescription>
+            </image>
+        </figure>
+        <p>
+            Your objective in this experiment is to measure the characteristic I-V curve at different discharge currents and to obtain a measure of the plasma parameters for each set of plasma conditions examined. To do this, you will follow the process described below.
+            <ol>
+                <li>
+                    <p>
+                        Ignite the plasma by turning on the power supply and increasing the voltage until you see a purple glow inside the tube.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Adjust the discharge current to the desired value. You will be measuring the characteristic I-V curve for at least 3 discharge currents between 20 and 120~mA.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Vary the voltage applied to the Langmuir probe (pin 5) using the second power supply, which provides voltages from -15V to +15V, and measure the current that is collected by the probe. As you are taking data, be sure that you have enough data points in the areas of interest.
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            Once you have your data, follow the procedure described below to find the various plasma parameters.
+            <ol>
+                <li>
+                    <p>
+                        Find the ion current by performing a linear fit to the ion saturation region of your data. Subtract this from the total current to find the electron current.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Plot the natural log of the electron current as a function of probe voltage and fit each of the electron retardation and saturation regions to a line. The slope of the best fit line in electron retardation region is the inverse of the electron temperature in electron Volts (eV) (<em> Why is this? Think about what Equation A.4 is telling you</em>), while the intersection of the fits to the electron retardation and saturation regions give you the plasma space potential, <m>V_p</m>, and the electron saturation current, <m>I_{e,sat}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use these results to find the relevant plasma parameters (with their associated uncertainties). These include
+                        <ol>
+                            <li>
+                                <p>
+                                    the ion and electron saturation currents
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    the floating (<m>I_{probe}=0</m>) and plasma space potential
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    the electron temperature
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    the ion (Equation A.3) and electron (Equation A.4) density (What is the uncertainty due to the uncertainty in the area of the probe?).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Debye Length
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                When a probe is inserted into the plasma, charges from the surrounding plasma will flow to it, effectively shielding the probe from the surrounding plasma. As a result, there is a characteristic length scale over which the probe will have an influence. This length scale is known as the Debye length and is given by
+                                                <me>
+                                                    \lambda_{D,e}=\sqrt{\frac{\varepsilon_0 k_B T_e}{e^2 n_e}}
+                                                </me>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            As you are analyzing your I-V curves, you should consider the following questions:
+            <ul>
+                <li>
+                    <p>
+                        How do your Langmuir probe traces for different discharge currents compare?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Is there a relationship between the parameters you found and the discharge current?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        How do the ion and electron densities compare? Is the condition of quasineutrality (<m>n_i\approx n_e</m>) satisfied? What is the ionization fraction?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        How does the electron temperature compare with room temperature? What is the thermal velocity of the electrons?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Over time, the glass tube does get warm. However, it doesn't melt. On the surface, this seems somewhat surprising given the electron temperatures that you measured. Why doesn't the glass melt?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        How does the Debye length compare to the size of your probe?
+                        <ul>
+                            <li>
+                                <p>
+                                    This is actually a fairly important question because one of the key assumption in probe theory is that the probe radius is large compared to the Debye length. When designing your own probe, this is a critical factor in designing a probe if you want it to measure something meaningful.
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            The following resources may be useful to you:
+            <ul>
+                <li>
+                    <p>
+                        Alexeff, J., T. Pytlinski, and N.L. Oleson, Am. J. Phys. {\bf 45}, 860 (1977)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        R.L. Merlino, Am. J. Phys. {\bf 75} 1078 (2007)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        L. Conde, {\it An introduction to Langmuir probe diagnostic of plasmas}, available online at \url{http://plasmalab.aero.upm.es/~lcl/PlasmaProbes/Probes-2010-2.pdf}
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Manual and background from College of St. Benedict/St. John's University (CBS/SJU). This document can be found at \url{http://www.physics.csbsju.edu/370/langmuir_probe.pdf}
+                    </p>
+                </li>
+            </ul>
+            Additionally, this manual and appendix have been taken nearly verbatim (beyond a few minor changes) from a document produced by J. Williams at Wittenberg University. Further documentation may be found at \url{http://wupl.wittenberg.edu/curricular/AAPT2014.html}
+        </p>
+
+    
+    </subsection>
+
+        <!--
+
+
+\noindent 
+
+\noindent 
+\vfill
+\noindent 
+
+\noindent 
+    -->
+        
+
+    <subsection xml:id="subsec-plasma-langmuir-theory">
+        <title>Langmuir Probe Theory</title>
+        
+    </subsection>
+
+    
+
+</section>

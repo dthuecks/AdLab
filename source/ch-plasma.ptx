@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-plasma" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Plasma Physics</title>
+
+  <introduction>
+    <p> Introduction to importance of plasma physics, provided in just a few sentences. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-plasma-intro.ptx" />
+  <xi:include href="sec-plasma-paschen.ptx" />
+  <xi:include href="sec-plasma-langmuir.ptx" />
+
+
+</chapter>
